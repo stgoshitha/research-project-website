@@ -597,6 +597,113 @@ button {
   margin-top: 10px;
 }
 
+
+/* =========================
+   DOMAIN DROPDOWN SECTION
+========================= */
+.domain-grid {
+  display: grid;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.domain-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 118, 110, 0.08);
+  border-radius: 24px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 30px rgba(11, 79, 73, 0.08);
+  transition: all 0.3s ease;
+}
+
+.domain-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 38px rgba(11, 79, 73, 0.14);
+}
+
+.domain-dropdown {
+  margin: 0;
+}
+
+.domain-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0b4f49;
+  line-height: 1.4;
+  padding-right: 48px;
+  transition: color 0.3s ease;
+}
+
+.domain-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.domain-dropdown summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(11, 79, 73, 0.08);
+  color: #0f766e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.domain-dropdown[open] summary {
+  color: #064e3b;
+}
+
+.domain-dropdown[open] summary::after {
+  content: "−";
+  background: #0b4f49;
+  color: #ffffff;
+}
+
+.domain-content {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(15, 118, 110, 0.12);
+  animation: fadeMilestone 0.3s ease;
+}
+
+.domain-content p,
+.domain-content li {
+  font-size: 1rem;
+  color: #0b4f49;
+  line-height: 1.75;
+}
+
+.domain-content p {
+  margin: 0;
+}
+
+.domain-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.domain-content li + li {
+  margin-top: 8px;
+}
+
+.domain-card:has(.domain-dropdown[open]) {
+  border-color: rgba(11, 79, 73, 0.18);
+  box-shadow: 0 18px 42px rgba(11, 79, 73, 0.12);
+}
+
 /* =========================
    TECHNOLOGIES SECTION
 ========================= */
@@ -722,7 +829,6 @@ button {
 ========================= */
 .milestones-dark-section {
   padding: 100px 0;
-  color: #ffffff;
   position: relative;
 }
 
@@ -742,7 +848,7 @@ button {
 .milestones-dark-wrapper::before {
   content: "";
   position: absolute;
-  left: 110px;
+  left: 50px;
   top: 0;
   width: 2px;
   height: 100%;
@@ -751,66 +857,145 @@ button {
 
 .milestone-row {
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 80px;
+  grid-template-columns: 100px 1fr;
+  gap: 40px;
   align-items: start;
-  min-height: 220px;
+  min-height: 140px;
   position: relative;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
 }
 
 .milestone-left {
   position: relative;
-  padding-left: 170px;
+  min-height: 100%;
 }
 
 .milestone-point {
   position: absolute;
-  left: 97px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 14px;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   background: #064e3b;
   border-radius: 50%;
-  box-shadow: 0 0 0 12px rgba(52, 211, 153, 0.35);
-  border: 1px solid #d1fae5;
+  box-shadow: 0 0 0 10px rgba(52, 211, 153, 0.25);
+  border: 2px solid #d1fae5;
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
-.milestone-left h3 {
-  font-size: 2.5rem;
-  line-height: 1;
-  font-weight: 800;
-  color: #0f766e;
-  margin: 0;
+.milestone-row:hover .milestone-point {
+  transform: translateX(-50%) scale(1.15);
+  background: #0f766e;
 }
 
+/* Right Card */
 .milestone-right {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(15, 118, 110, 0.08);
   border-radius: 24px;
   padding: 24px 28px;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(11, 79, 73, 0.08);
+  transition: all 0.3s ease;
 }
 
 .milestone-right:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 16px 38px rgba(11, 79, 73, 0.14);
 }
 
-.milestone-right h4 {
+/* Dropdown */
+.milestone-dropdown {
+  margin: 0;
+}
+
+.milestone-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
   font-size: 1.35rem;
-  color: #0b4f49;
-  margin-bottom: 12px;
   font-weight: 800;
+  color: #0b4f49;
+  line-height: 1.4;
+  padding-right: 48px;
+  transition: color 0.3s ease;
 }
 
-.milestone-right p {
+.milestone-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.milestone-dropdown summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(11, 79, 73, 0.08);
+  color: #0f766e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.milestone-dropdown[open] summary {
+  color: #064e3b;
+}
+
+.milestone-dropdown[open] summary::after {
+  content: "−";
+  background: #0b4f49;
+  color: #ffffff;
+}
+
+/* Content */
+.milestone-content {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(15, 118, 110, 0.12);
+  animation: fadeMilestone 0.3s ease;
+}
+
+.milestone-content p {
   font-size: 1rem;
   color: #0b4f49;
-  line-height: 1.7;
+  line-height: 1.75;
   max-width: 760px;
+  margin: 0 0 10px 0;
+}
+
+.milestone-content p:last-child {
   margin-bottom: 0;
+}
+
+.milestone-content strong {
+  color: #064e3b;
+  font-weight: 700;
+}
+
+.milestone-right:has(.milestone-dropdown[open]) {
+  border-color: rgba(11, 79, 73, 0.18);
+  box-shadow: 0 18px 42px rgba(11, 79, 73, 0.12);
+}
+
+@keyframes fadeMilestone {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================
@@ -1107,12 +1292,6 @@ button {
 .about-grid {
   align-items: stretch;
 }
-/* ---------------------------------------------------------------- */
-
-
-
-
-/* ------------------------------------------------------------------ */
 
 .member-card {
   text-align: center;
@@ -1572,31 +1751,44 @@ button {
 
   .milestones-title {
     font-size: 2.3rem;
-  }
-
-  .milestone-row {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    min-height: auto;
-    padding-left: 70px;
-    padding-bottom: 55px;
+    margin-bottom: 55px;
   }
 
   .milestones-dark-wrapper::before {
-    left: 18px;
+    left: 40px;
   }
 
-  .milestone-left {
-    padding-left: 45px;
+  .milestone-row {
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    padding-bottom: 32px;
+    min-height: 120px;
   }
 
   .milestone-point {
-    left: 0;
-    top: 10px;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 0 9px rgba(52, 211, 153, 0.22);
   }
 
-  .milestone-left h3 {
-    font-size: 2rem;
+  .milestone-right {
+    padding: 22px 24px;
+  }
+
+  .milestone-dropdown summary {
+    font-size: 1.2rem;
+    padding-right: 42px;
+  }
+
+  .milestone-dropdown summary::after {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+
+  .milestone-content p {
+    font-size: 0.96rem;
+    line-height: 1.7;
   }
 
   .demo-video-card {
@@ -1626,37 +1818,93 @@ button {
     height: 105px;
   }
 
+  .domain-card {
+    padding: 18px 18px;
+    border-radius: 20px;
+  }
+
+  .domain-dropdown summary {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-right: 40px;
+  }
+
+  .domain-dropdown summary::after {
+    width: 28px;
+    height: 28px;
+    font-size: 1.05rem;
+  }
+
+  .domain-content {
+    margin-top: 14px;
+    padding-top: 14px;
+  }
+
+  .domain-content p,
+  .domain-content li {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .milestones-dark-section {
+    padding: 75px 0;
+  }
+
   .milestones-title {
     font-size: 1.9rem;
-    margin-bottom: 50px;
+    margin-bottom: 42px;
+  }
+
+  .milestones-dark-wrapper::before {
+    left: 24px;
   }
 
   .milestone-row {
-    padding-left: 48px;
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+    min-height: auto;
+    padding-bottom: 26px;
   }
 
   .milestone-left {
-    padding-left: 26px;
-  }
-
-  .milestone-left h3 {
-    font-size: 1.7rem;
+    min-height: 100%;
   }
 
   .milestone-point {
-    width: 18px;
-    height: 18px;
-    box-shadow: 0 0 0 8px rgba(52, 211, 153, 0.18);
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 0 7px rgba(52, 211, 153, 0.18);
   }
 
-  .milestone-right h4 {
-    font-size: 1.15rem;
+  .milestone-right {
+    border-radius: 20px;
+    padding: 18px 18px;
   }
 
-  .milestone-right p {
-    font-size: 0.95rem;
+  .milestone-dropdown summary {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-right: 40px;
+  }
+
+  .milestone-dropdown summary::after {
+    width: 28px;
+    height: 28px;
+    font-size: 1.05rem;
+  }
+
+  .milestone-content {
+    margin-top: 14px;
+    padding-top: 14px;
+  }
+
+  .milestone-content p {
+    font-size: 0.92rem;
+    line-height: 1.65;
   }
 }
+
 
 @media (max-width: 576px) {
   /* ======================================
@@ -1726,20 +1974,74 @@ button {
   .section-title {
     font-size: 1.7rem;
   }
-
-  .milestones-title {
-    font-size: 1.6rem;
+  
+  .domain-card {
+    padding: 16px 15px;
+    border-radius: 18px;
   }
 
-  .milestone-point {
-    left: -25px;
-    width: 18px;
-    height: 18px;
-    box-shadow: 0 0 0 8px rgba(52, 211, 153, 0.18);
+  .domain-dropdown summary {
+    font-size: 0.95rem;
+    padding-right: 36px;
+  }
+
+  .domain-dropdown summary::after {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
+  }
+
+  .domain-content p,
+  .domain-content li {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .milestones-dark-section {
+    padding: 65px 0;
+  }
+
+  .milestones-title {
+    font-size: 1.65rem;
+    margin-bottom: 34px;
+  }
+
+  .milestones-dark-wrapper::before {
+    left: 18px;
   }
 
   .milestone-row {
-    padding-left: 34px;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    padding-bottom: 22px;
+  }
+
+  .milestone-point {
+    top: 11px;
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.15);
+  }
+
+  .milestone-right {
+    padding: 16px 15px;
+    border-radius: 18px;
+  }
+
+  .milestone-dropdown summary {
+    font-size: 0.95rem;
+    padding-right: 36px;
+  }
+
+  .milestone-dropdown summary::after {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
+  }
+
+  .milestone-content p {
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 
   .document-card {
