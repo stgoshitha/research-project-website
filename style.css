@@ -1,10 +1,10 @@
 /* =========================================================
-   GREENAYU WEBSITE - PRODUCTION STYLESHEET
+   GREENAYU WEBSITE - UPDATED RESPONSIVE STYLESHEET
    ---------------------------------------------------------
    Notes:
    1. Existing class structure preserved.
-   2. Cleaned and organized section-wise.
-   3. Responsive and accessible improvements included.
+   2. Mobile, tablet, and desktop responsive improvements added.
+   3. Navbar, hero, grids, timeline, cards, contact, and demo sections optimized.
    ========================================================= */
 
 /* =========================
@@ -88,6 +88,7 @@ textarea {
 
 button {
   outline: none;
+  cursor: pointer;
 }
 
 .container {
@@ -222,6 +223,7 @@ summary:focus-visible {
   align-items: center;
   padding: 16px 0;
   gap: 20px;
+  position: relative;
 }
 
 .logo {
@@ -229,6 +231,7 @@ summary:focus-visible {
   font-weight: 800;
   color: var(--primary-dark);
   letter-spacing: 0.02em;
+  flex-shrink: 0;
 }
 
 .logo span {
@@ -239,6 +242,7 @@ summary:focus-visible {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-link {
@@ -270,8 +274,9 @@ summary:focus-visible {
   font-size: 1.8rem;
   background: none;
   border: none;
-  cursor: pointer;
   color: var(--primary-dark);
+  line-height: 1;
+  padding: 4px;
 }
 
 /* =========================
@@ -464,6 +469,25 @@ body.loaded .hero {
   box-shadow: 0 0 0 6px rgba(132, 204, 22, 0.14);
 }
 
+.hero-text h1 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+  color: #0f172a;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #0f766e, #84cc16);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 .hero-badges {
   display: flex;
   flex-wrap: wrap;
@@ -488,25 +512,6 @@ body.loaded .hero {
 .badge:hover {
   transform: translateY(-3px);
   background: #ffffff;
-}
-
-.hero-text h1 {
-  font-size: clamp(2.4rem, 5vw, 4.4rem);
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-  margin-bottom: 20px;
-  color: #0f172a;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.highlight {
-  background: linear-gradient(90deg, #0f766e, #84cc16);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
 }
 
 .hero-description {
@@ -1357,6 +1362,10 @@ body.loaded .hero {
   align-items: stretch;
 }
 
+.about-grid > div:empty {
+  display: none;
+}
+
 .member-card {
   text-align: center;
   padding: 24px 20px;
@@ -1369,13 +1378,14 @@ body.loaded .hero {
 }
 
 .member-img {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 24px;
   border: 4px solid rgba(15, 118, 110, 0.1);
   box-shadow: 0 14px 28px rgba(16, 54, 49, 0.12);
 }
+
 .member-info h4 {
   color: var(--primary-dark);
   margin-bottom: 8px;
@@ -1404,6 +1414,7 @@ body.loaded .hero {
   color: #6c7574;
   font-weight: 500;
   transition: 0.3s;
+  word-break: break-word;
 }
 
 .member-email a:hover {
@@ -1627,6 +1638,7 @@ body.loaded .hero {
 
 .contact-item span {
   font-size: 1.3rem;
+  flex-shrink: 0;
 }
 
 .contact-item strong {
@@ -1637,6 +1649,7 @@ body.loaded .hero {
 
 .contact-item p {
   margin: 0;
+  word-break: break-word;
 }
 
 .contact-note {
@@ -1744,24 +1757,54 @@ body.loaded .hero {
 /* =========================
    RESPONSIVE
 ========================= */
+@media (max-width: 1200px) {
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-text {
+    max-width: 900px;
+  }
+}
+
 @media (max-width: 992px) {
+  .section {
+    padding: 85px 0;
+  }
+
+  .navbar {
+    padding: 14px 0;
+  }
+
   .nav {
     position: absolute;
-    top: 100%;
-    right: 4%;
-    width: min(300px, 92vw);
-    background: rgba(255, 255, 255, 0.96);
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(320px, 92vw);
+    background: rgba(255, 255, 255, 0.98);
     border: 1px solid rgba(15, 118, 110, 0.08);
     border-radius: 18px;
     box-shadow: 0 18px 45px rgba(16, 54, 49, 0.12);
     padding: 18px;
     display: none;
     flex-direction: column;
+    align-items: flex-start;
     gap: 14px;
+    z-index: 1001;
   }
 
   .nav.show {
     display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+  }
+
+  .nav-link::after,
+  .nav-link.active::after,
+  .nav-link:hover::after {
+    bottom: -4px;
   }
 
   .menu-toggle {
@@ -1771,7 +1814,7 @@ body.loaded .hero {
   }
 
   .hero {
-    padding: 100px 0 80px;
+    padding: 95px 0 80px;
   }
 
   .hero-text h1 {
@@ -1796,9 +1839,169 @@ body.loaded .hero {
   .slides-grid {
     grid-template-columns: 1fr;
   }
+
+  .milestones-dark-wrapper::before {
+    left: 28px;
+  }
+
+  .milestone-row {
+    grid-template-columns: 56px 1fr;
+    gap: 18px;
+  }
+
+  .milestone-point {
+    left: 28px;
+    transform: translateX(-50%);
+  }
+
+  .milestone-row:hover .milestone-point {
+    transform: translateX(-50%) scale(1.15);
+  }
+
+  .demo-video-card {
+    gap: 24px;
+  }
+
+  .about-grid > div:empty {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  .container {
+    width: min(94%, var(--max-width));
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 7vw, 2.3rem);
+  }
+
+  .section-subtitle {
+    margin-bottom: 34px;
+    font-size: 0.96rem;
+  }
+
+  .hero {
+    padding: 88px 0 72px;
+  }
+
+  .hero-kicker {
+    font-size: 0.84rem;
+    padding: 9px 14px;
+  }
+
+  .hero-badges {
+    gap: 10px;
+  }
+
+  .badge {
+    font-size: 0.82rem;
+    padding: 8px 13px;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+    margin-bottom: 26px;
+  }
+
+  .hero-actions {
+    gap: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .glass-info-card,
+  .stat-card,
+  .card,
+  .milestone-right,
+  .domain-card,
+  .document-card,
+  .slide-card,
+  .demo-video-card,
+  .contact-info,
+  .contact-form {
+    border-radius: 20px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .domain-card {
+    padding: 20px 20px;
+  }
+
+  .domain-dropdown summary {
+    font-size: 1.1rem;
+    padding-right: 42px;
+  }
+
+  .domain-content p,
+  .domain-content li {
+    font-size: 0.95rem;
+  }
+
+  .tech-section {
+    padding: 24px 20px;
+  }
+
+  .tech-section-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .tech-item {
+    padding: 12px 16px;
+  }
+
+  .tech-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .milestones-title {
+    margin-bottom: 46px;
+  }
+
+  .milestones-dark-wrapper::before {
+    left: 18px;
+  }
+
+  .milestone-row {
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    min-height: 120px;
+    padding-bottom: 28px;
+  }
+
+  .milestone-point {
+    width: 18px;
+    height: 18px;
+    left: 18px;
+    top: 14px;
+    box-shadow: 0 0 0 7px rgba(52, 211, 153, 0.2);
+  }
+
+  .milestone-right {
+    padding: 20px 18px;
+  }
+
+  .milestone-dropdown summary {
+    font-size: 1.05rem;
+    padding-right: 40px;
+  }
+
+  .milestone-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
   .document-card {
     flex-direction: column;
     align-items: flex-start;
@@ -1811,88 +2014,6 @@ body.loaded .hero {
 
   .document-btn {
     align-self: flex-start;
-  }
-
-  .demo-video-text h3 {
-    font-size: 1.7rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .section {
-    padding: 80px 0;
-  }
-
-  .hero {
-    padding: 90px 0 70px;
-  }
-
-  .hero-kicker {
-    font-size: 0.82rem;
-    padding: 9px 14px;
-  }
-
-  .badge {
-    font-size: 0.82rem;
-    padding: 9px 14px;
-  }
-
-  .hero-description {
-    font-size: 0.96rem;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-  }
-
-  .documents-header,
-  .slides-header,
-  .contact-header,
-  .about-header,
-  .demo-header {
-    margin-bottom: 40px;
-  }
-
-  .document-card,
-  .slide-card,
-  .demo-video-card {
-    border-radius: 20px;
-  }
-
-  .document-card {
-    gap: 18px;
-  }
-
-  .document-icon {
-    width: 58px;
-    height: 58px;
-    font-size: 1.45rem;
-    border-radius: 16px;
-  }
-
-  .document-content h3,
-  .slide-card h3 {
-    font-size: 1.05rem;
-  }
-
-  .document-content p,
-  .slide-card p,
-  .demo-video-text p {
-    font-size: 0.9rem;
-  }
-
-  .doc-type,
-  .doc-status,
-  .slide-tags span {
-    font-size: 0.72rem;
-    padding: 6px 10px;
-  }
-
-  .document-btn,
-  .slide-btn {
-    min-width: 150px;
-    font-size: 0.82rem;
-    padding: 11px 18px;
   }
 
   .slide-card {
@@ -1911,29 +2032,232 @@ body.loaded .hero {
     height: 30px;
   }
 
+  .member-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .demo-header {
+    margin-bottom: 42px;
+  }
+
   .demo-video-card {
     padding: 22px;
-    gap: 22px;
   }
 
   .demo-video-text h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .demo-video-preview,
   .demo-video-preview img {
-    min-height: 240px;
+    min-height: 260px;
   }
 
-  .demo-play-btn {
-    width: 64px;
-    height: 64px;
+  .contact-wrapper {
+    gap: 18px;
+  }
+
+  .contact-item {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 76px 0;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
     font-size: 1.6rem;
   }
 
-  .member-image-wrap {
-    width: 110px;
-    height: 110px;
+  .nav {
+    right: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .hero {
+    padding: 84px 0 66px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+    line-height: 1.12;
+  }
+
+  .hero-kicker {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .badge {
+    font-size: 0.78rem;
+    padding: 8px 12px;
+  }
+
+  .hero-description {
+    font-size: 0.94rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .glass-info-card,
+  .stat-card {
+    padding: 18px 16px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .documents-header,
+  .slides-header,
+  .contact-header,
+  .about-header,
+  .demo-header {
+    margin-bottom: 36px;
+  }
+
+  .document-card,
+  .slide-card,
+  .demo-video-card {
+    border-radius: 18px;
+  }
+
+  .document-card {
+    gap: 16px;
+  }
+
+  .document-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.35rem;
+    border-radius: 16px;
+  }
+
+  .document-content h3,
+  .slide-card h3 {
+    font-size: 1rem;
+  }
+
+  .document-content p,
+  .slide-card p,
+  .demo-video-text p,
+  .contact-item p {
+    font-size: 0.9rem;
+  }
+
+  .doc-type,
+  .doc-status,
+  .slide-tags span,
+  .demo-video-meta span {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+
+  .document-btn,
+  .slide-btn,
+  .demo-video-btn {
+    min-width: 145px;
+    font-size: 0.82rem;
+    padding: 11px 16px;
+  }
+
+  .slide-card {
+    padding: 24px 18px;
+  }
+
+  .slide-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .demo-video-card {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .demo-video-text h3 {
+    font-size: 1.32rem;
+  }
+
+  .demo-video-preview,
+  .demo-video-preview img {
+    min-height: 220px;
+  }
+
+  .demo-play-btn {
+    width: 62px;
+    height: 62px;
+    font-size: 1.5rem;
+  }
+
+  .member-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+  }
+
+  .member-info h4 {
+    font-size: 1rem;
+  }
+
+  .contact-info,
+  .contact-form,
+  .card {
+    padding: 20px 16px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    border-radius: 14px;
+    padding: 13px 14px;
+  }
+
+  .footer {
+    padding: 22px 0;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: min(95%, var(--max-width));
+  }
+
+  .hero-text h1 {
+    font-size: 1.65rem;
+  }
+
+  .hero-kicker {
+    gap: 8px;
+  }
+
+  .badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .slide-btn,
+  .document-btn,
+  .demo-video-btn {
+    width: 100%;
+  }
+
+  .document-btn {
+    align-self: stretch;
+  }
+
+  .contact-btn {
+    padding: 12px 18px;
   }
 }
 
