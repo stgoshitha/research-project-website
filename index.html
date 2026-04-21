@@ -9,79 +9,91 @@
   <meta name="theme-color" content="#0f766e" />
   <title>GreenAyu | Sri Lankan Medicinal Plants Research</title>
 
+  <!-- Google Fonts: Distinctive pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/svg+xml" href="images/greenayu_header.png" />
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Header -->
+
+  <!-- ===================== HEADER ===================== -->
   <header class="header">
     <div class="container navbar">
-      <a href="#home" class="logo">GreenAyu<span>-Website</span></a>
+      <a href="#home" class="logo">
+        <span class="logo-leaf">✦</span>
+        Green<span class="logo-accent">Ayu</span>
+      </a>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false"
         aria-controls="navMenu" type="button">
-        &#9776;
+        <span></span><span></span><span></span>
       </button>
 
       <nav class="nav" id="navMenu" aria-label="Main navigation">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#domain" class="nav-link">Domain</a>
+        <a href="#home"       class="nav-link active">Home</a>
+        <a href="#domain"     class="nav-link">Domain</a>
         <a href="#milestones" class="nav-link">Milestones</a>
-        <a href="#documents" class="nav-link">Documents</a>
-        <a href="#slides" class="nav-link">Slides</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#demo" class="nav-link">Demo</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#documents"  class="nav-link">Documents</a>
+        <a href="#slides"     class="nav-link">Slides</a>
+        <a href="#about"      class="nav-link">About Us</a>
+        <a href="#demo"       class="nav-link">Demo</a>
+        <a href="#contact"    class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Intro Loader -->
+  <!-- ===================== INTRO LOADER ===================== -->
   <div class="intro-loader" id="introLoader" aria-hidden="true">
     <div class="intro-panel intro-panel-left"></div>
     <div class="intro-panel intro-panel-right"></div>
-
     <div class="intro-center">
+      <div class="intro-emblem">✦</div>
       <h1 class="intro-title">GreenAyu</h1>
       <p class="intro-subtitle">AI-Powered Medicinal Plant Research</p>
     </div>
   </div>
 
-  <!-- Hero -->
+  <!-- ===================== HERO ===================== -->
   <section class="hero section" id="home">
+    <div class="hero-noise"></div>
     <div class="hero-bg-orb hero-bg-orb-1"></div>
     <div class="hero-bg-orb hero-bg-orb-2"></div>
+    <div class="hero-bg-orb hero-bg-orb-3"></div>
     <div class="hero-grid-pattern"></div>
 
     <div class="container hero-content">
       <div class="hero-text reveal">
+
         <div class="hero-kicker">
           <span class="hero-dot"></span>
           AI-Powered Research Innovation
         </div>
 
         <h1>
-          AI-Based System for <span class="highlight">Identification</span> and
-          <span class="highlight">Quality Assessment</span>
+          AI-Based System for <span class="highlight">Identification</span><br>
+          and <span class="highlight">Quality Assessment</span><br>
           of Sri Lankan Medicinal Plants
         </h1>
 
         <div class="hero-badges">
-          <span class="badge">Medicinal Plant Identification</span>
-          <span class="badge">Quality Assessment</span>
-          <span class="badge">Sri Lankan Herbal Research</span>
+          <span class="badge">🌿 Medicinal Plant Identification</span>
+          <span class="badge">🔬 Quality Assessment</span>
+          <span class="badge">🇱🇰 Sri Lankan Herbal Research</span>
         </div>
 
         <p class="hero-description">
-          A smart and modern research platform designed to identify medicinal plants found in Sri Lanka and assess their
-          quality using intelligent image-based analysis. This project combines academic research, AI innovation, and
-          practical usability into one professional solution.
+          A smart and modern research platform designed to identify medicinal plants found in Sri Lanka
+          and assess their quality using intelligent image-based analysis — combining academic research,
+          AI innovation, and practical usability into one professional solution.
         </p>
 
         <div class="hero-actions">
-          <a href="#domain" class="btn btn-primary">Explore Research</a>
+          <a href="#domain"    class="btn btn-primary">Explore Research</a>
           <a href="#documents" class="btn btn-secondary">View Documents</a>
         </div>
 
@@ -90,7 +102,6 @@
             <div class="mini-label">Quality Analysis</div>
             <p>AI-assisted evaluation for healthy and high-quality plant samples.</p>
           </div>
-
           <div class="glass-info-card">
             <div class="mini-label">Research Focus</div>
             <p>Plant identification, AI classification, and medicinal quality prediction.</p>
@@ -102,360 +113,220 @@
             <h3>AI</h3>
             <p>Image-based plant recognition workflow</p>
           </div>
-
           <div class="stat-card">
             <h3>ML</h3>
             <p>Model-driven quality evaluation approach</p>
           </div>
-
           <div class="stat-card">
             <h3>SL</h3>
             <p>Focused on Sri Lankan medicinal plant species</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- ===================== DOMAIN ===================== -->
   <section class="section" id="domain">
     <div class="container">
-      <h2 class="section-title reveal">Research Domain</h2>
-      <p class="section-subtitle reveal">
-        This section presents the research background, identified gap, core problem,
-        objectives, and methodology behind the AI-based system developed for
-        Sri Lankan medicinal plants.
-      </p>
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Our Research</span>
+        <h2 class="section-title">Research Domain</h2>
+        <p class="section-subtitle">
+          The research background, identified gap, core problem, objectives,
+          and methodology behind the AI-based system developed for Sri Lankan medicinal plants.
+        </p>
+      </div>
 
       <div class="domain-grid">
+
         <div class="domain-card reveal">
           <details class="domain-dropdown">
-            <summary>Literature Survey</summary>
+            <summary>
+              <span class="domain-num">01</span>
+              Literature Survey
+            </summary>
             <div class="domain-content">
-              <p>
-                Artificial intelligence has shown strong potential in medicinal-plant
-                recognition, especially through deep learning and transfer learning
-                models that classify plants from images with high accuracy. The
-                reviewed studies, including both international and Sri Lankan work,
-                show that CNN-based approaches are effective when suitable training
-                data is available.
-              </p>
-              <p>
-                However, most earlier systems were built around global datasets or
-                leaf-only recognition. That makes them less reliable for Sri Lankan
-                medicinal plants and less useful in real medicinal settings where the
-                correct plant part, plant condition, and practical field use also matter.
-                As a result, the literature points toward the need for a more localized
-                and complete decision-support approach.
-              </p>
+              <p>Artificial intelligence has shown strong potential in medicinal-plant recognition, especially
+                through deep learning and transfer learning models that classify plants from images with high
+                accuracy. The reviewed studies, including both international and Sri Lankan work, show that
+                CNN-based approaches are effective when suitable training data is available.</p>
+              <p>However, most earlier systems were built around global datasets or leaf-only recognition.
+                That makes them less reliable for Sri Lankan medicinal plants and less useful in real medicinal
+                settings where the correct plant part, plant condition, and practical field use also matter.
+                As a result, the literature points toward the need for a more localized and complete
+                decision-support approach.</p>
             </div>
           </details>
         </div>
 
         <div class="domain-card reveal">
           <details class="domain-dropdown">
-            <summary>Research Gap</summary>
+            <summary>
+              <span class="domain-num">02</span>
+              Research Gap
+            </summary>
             <div class="domain-content">
-              <p>
-                The main gap in existing research is not only about model accuracy,
-                but about completeness. Many systems can identify a plant species,
-                yet very few combine localized Sri Lankan data, plant-part
-                segmentation, quality evaluation, post-harvest guidance, and
-                usability for non-technical users in one platform.
-              </p>
-              <p>
-                This means farmers, herbal practitioners, and students may still need
-                to rely on separate tools or manual judgment even after a species is
-                recognized. The paper therefore positions this project as a response
-                to the missing integration between recognition, quality assessment,
-                and practical decision support.
-              </p>
-              <p class="domain-note">
-                Source: Literature Review, pp. 1–2; Introduction, p. 1.
-              </p>
+              <p>The main gap in existing research is not only about model accuracy, but about completeness.
+                Many systems can identify a plant species, yet very few combine localized Sri Lankan data,
+                plant-part segmentation, quality evaluation, post-harvest guidance, and usability for
+                non-technical users in one platform.</p>
+              <p>This means farmers, herbal practitioners, and students may still need to rely on separate
+                tools or manual judgment even after a species is recognized. The paper therefore positions
+                this project as a response to the missing integration between recognition, quality assessment,
+                and practical decision support.</p>
+              <p class="domain-note">Source: Literature Review, pp. 1–2; Introduction, p. 1.</p>
             </div>
           </details>
         </div>
 
         <div class="domain-card reveal">
           <details class="domain-dropdown">
-            <summary>Research Problem</summary>
+            <summary>
+              <span class="domain-num">03</span>
+              Research Problem
+            </summary>
             <div class="domain-content">
-              <p>
-                Sri Lanka’s medicinal plant sector depends on correct plant
-                identification, proper harvesting, good nutrient management, and
-                careful post-harvest handling. When any of these steps go wrong,
-                medicinal potency and economic value can drop, and safe practical
-                use becomes more difficult.
-              </p>
-              <p>
-                The core problem is therefore broader than species recognition alone.
-                A useful system must also check plant quality, understand which plant
-                part is relevant, and provide actionable guidance on harvesting,
-                fertilizer use, drying, and storage. This project addresses that
-                wider real-world problem through one integrated AI workflow.
-              </p>
-              <p class="domain-note">
-                Source: Abstract and Introduction, p. 1.
-              </p>
+              <p>Sri Lanka's medicinal plant sector depends on correct plant identification, proper harvesting,
+                good nutrient management, and careful post-harvest handling. When any of these steps go wrong,
+                medicinal potency and economic value can drop, and safe practical use becomes more difficult.</p>
+              <p>The core problem is therefore broader than species recognition alone. A useful system must
+                also check plant quality, understand which plant part is relevant, and provide actionable
+                guidance on harvesting, fertilizer use, drying, and storage. This project addresses that
+                wider real-world problem through one integrated AI workflow.</p>
+              <p class="domain-note">Source: Abstract and Introduction, p. 1.</p>
             </div>
           </details>
         </div>
 
         <div class="domain-card reveal">
           <details class="domain-dropdown">
-            <summary>Research Objectives</summary>
+            <summary>
+              <span class="domain-num">04</span>
+              Research Objectives
+            </summary>
             <div class="domain-content">
               <ul>
-                <li>
-                  To develop a localized AI workflow that identifies Sri Lankan
-                  medicinal plant species and evaluates visible plant health.
-                </li>
-                <li>
-                  To detect and segment the correct medicinal plant parts so the
-                  system supports safer and more accurate usage.
-                </li>
-                <li>
-                  To provide practical decision support for harvest timing, fertilizer
-                  selection, drying, and storage.
-                </li>
-                <li>
-                  To deploy the complete solution as a lightweight web platform
-                  that remains useful in both rural and urban contexts.
-                </li>
+                <li>To develop a localized AI workflow that identifies Sri Lankan medicinal plant species
+                  and evaluates visible plant health.</li>
+                <li>To detect and segment the correct medicinal plant parts so the system supports safer
+                  and more accurate usage.</li>
+                <li>To provide practical decision support for harvest timing, fertilizer selection, drying,
+                  and storage.</li>
+                <li>To deploy the complete solution as a lightweight web platform that remains useful in
+                  both rural and urban contexts.</li>
               </ul>
-              <p>
-                In full, the project also targets cause detection for poor plant
-                condition, such as disease, pests, nutrient stress, or environmental
-                impact, and connects those findings with recommendation logic for
-                real-world use.
-              </p>
-              <p class="domain-note">
-                Source: Abstract and Introduction, p. 1; Methodology, pp. 2–3.
-              </p>
+              <p>In full, the project also targets cause detection for poor plant condition — disease, pests,
+                nutrient stress, or environmental impact — and connects those findings with recommendation
+                logic for real-world use.</p>
+              <p class="domain-note">Source: Abstract and Introduction, p. 1; Methodology, pp. 2–3.</p>
             </div>
           </details>
         </div>
 
         <div class="domain-card reveal">
           <details class="domain-dropdown">
-            <summary>Methodology</summary>
+            <summary>
+              <span class="domain-num">05</span>
+              Methodology
+            </summary>
             <div class="domain-content">
+              <p>The system follows a structured AI pipeline starting from data collection, preprocessing,
+                model training, and deployment. A localized dataset of Sri Lankan medicinal plants was
+                collected and used to train deep learning models for plant identification, quality assessment,
+                and segmentation.</p>
+              <p>The system consists of four main modules: plant identification and quality assessment,
+                plant part segmentation, post-harvest advisory, and fertilizer recommendation with harvest
+                prediction. These modules are integrated into a lightweight web-based platform for real-time
+                usage.</p>
 
-              <p>
-                The system follows a structured AI pipeline starting from data collection,
-                preprocessing, model training, and deployment. A localized dataset of Sri Lankan
-                medicinal plants was collected and used to train deep learning models for plant
-                identification, quality assessment, and segmentation.
-              </p>
-
-              <p>
-                The system consists of four main modules: plant identification and quality
-                assessment, plant part segmentation, post-harvest advisory, and fertilizer
-                recommendation with harvest prediction. These modules are integrated into a
-                lightweight web-based platform for real-time usage.
-              </p>
-
-              <!-- SYSTEM OVERVIEW -->
               <h4 class="method-title">System Overview</h4>
               <img src="images/system-overview.png" class="method-img" alt="System Overview">
 
-              <!-- FLOWCHARTS -->
               <h4 class="method-title">Workflow of Components</h4>
-
               <div class="method-grid">
                 <img src="images/flow1.jpeg" alt="Flowchart 1">
                 <img src="images/flow2.jpeg" alt="Flowchart 2">
-                <img src="images/flow3.png" alt="Flowchart 3">
-                <img src="images/flow4.png" alt="Flowchart 4">
+                <img src="images/flow3.png"  alt="Flowchart 3">
+                <img src="images/flow4.png"  alt="Flowchart 4">
               </div>
-
             </div>
           </details>
         </div>
+
       </div>
     </div>
   </section>
-  <!-- Technologies -->
-  <div class="card tech-section reveal">
-    <div class="tech-section-header">
-      <span class="tech-label">Technologies Used</span>
-      <h3>Core Tools & Technologies</h3>
-      <p>
-        The project combines modern web technologies, AI-based processing, and
-        machine learning components to identify and assess Sri Lankan medicinal plants.
-      </p>
-    </div>
 
-    <div class="tech-slider">
-      <div class="tech-track">
-        <div class="tech-item">
-          <img src="images/react.png" alt="ReactJs" />
-          <span>ReactJs</span>
+  <!-- ===================== TECHNOLOGIES ===================== -->
+  <div class="tech-section-wrapper">
+    <div class="container">
+      <div class="card tech-section reveal">
+        <div class="tech-section-header">
+          <span class="tech-label">Stack</span>
+          <h3>Core Tools &amp; Technologies</h3>
+          <p>The project combines modern web technologies, AI-based processing, and machine learning
+            components to identify and assess Sri Lankan medicinal plants.</p>
         </div>
 
-        <div class="tech-item">
-          <img src="images/python.jpg" alt="Python" />
-          <span>Python</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/node.svg" alt="NodeJs" />
-          <span>NodeJs</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/express.png" alt="Express" />
-          <span>Express</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/fastapi.svg" alt="FastAPI" />
-          <span>FastAPI</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/mongodb.png" alt="MongoDB" />
-          <span>MongoDB</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/colab.png" alt="Google Colab" />
-          <span>Google Colab</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/pandas.png" alt="Pandas" />
-          <span>Pandas</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/opencv.png" alt="OpenCV" />
-          <span>OpenCV</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/tensorflow.png" alt="TensorFlow" />
-          <span>TensorFlow</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/scikit.png" alt="Scikit-learn" />
-          <span>Scikit-learn</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/roboflow.png" alt="Roboflow" />
-          <span>Roboflow</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/vscode.jpg" alt="VS Code" />
-          <span>VS Code</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/postman.png" alt="Postman" />
-          <span>Postman</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/github.jpg" alt="GitHub" />
-          <span>GitHub</span>
-        </div>
-
-        <!-- Duplicate set for seamless loop -->
-        <div class="tech-item">
-          <img src="images/react.png" alt="ReactJs" />
-          <span>ReactJs</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/python.jpg" alt="Python" />
-          <span>Python</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/node.svg" alt="NodeJs" />
-          <span>NodeJs</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/express.png" alt="Express" />
-          <span>Express</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/fastapi.svg" alt="FastAPI" />
-          <span>FastAPI</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/mongodb.png" alt="MongoDB" />
-          <span>MongoDB</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/colab.png" alt="Google Colab" />
-          <span>Google Colab</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/pandas.png" alt="Pandas" />
-          <span>Pandas</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/opencv.png" alt="OpenCV" />
-          <span>OpenCV</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/tensorflow.png" alt="TensorFlow" />
-          <span>TensorFlow</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/scikit.png" alt="Scikit-learn" />
-          <span>Scikit-learn</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/roboflow.png" alt="Roboflow" />
-          <span>Roboflow</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/vscode.jpg" alt="VS Code" />
-          <span>VS Code</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/postman.png" alt="Postman" />
-          <span>Postman</span>
-        </div>
-
-        <div class="tech-item">
-          <img src="images/github.jpg" alt="GitHub" />
-          <span>GitHub</span>
+        <div class="tech-slider">
+          <div class="tech-track">
+            <!-- First set -->
+            <div class="tech-item"><img src="images/react.png"      alt="ReactJs"      /><span>ReactJs</span></div>
+            <div class="tech-item"><img src="images/python.jpg"     alt="Python"       /><span>Python</span></div>
+            <div class="tech-item"><img src="images/node.svg"       alt="NodeJs"       /><span>NodeJs</span></div>
+            <div class="tech-item"><img src="images/express.png"    alt="Express"      /><span>Express</span></div>
+            <div class="tech-item"><img src="images/fastapi.svg"    alt="FastAPI"      /><span>FastAPI</span></div>
+            <div class="tech-item"><img src="images/mongodb.png"    alt="MongoDB"      /><span>MongoDB</span></div>
+            <div class="tech-item"><img src="images/colab.png"      alt="Google Colab" /><span>Google Colab</span></div>
+            <div class="tech-item"><img src="images/pandas.png"     alt="Pandas"       /><span>Pandas</span></div>
+            <div class="tech-item"><img src="images/opencv.png"     alt="OpenCV"       /><span>OpenCV</span></div>
+            <div class="tech-item"><img src="images/tensorflow.png" alt="TensorFlow"   /><span>TensorFlow</span></div>
+            <div class="tech-item"><img src="images/scikit.png"     alt="Scikit-learn" /><span>Scikit-learn</span></div>
+            <div class="tech-item"><img src="images/roboflow.png"   alt="Roboflow"     /><span>Roboflow</span></div>
+            <div class="tech-item"><img src="images/vscode.jpg"     alt="VS Code"      /><span>VS Code</span></div>
+            <div class="tech-item"><img src="images/postman.png"    alt="Postman"      /><span>Postman</span></div>
+            <div class="tech-item"><img src="images/github.jpg"     alt="GitHub"       /><span>GitHub</span></div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="tech-item"><img src="images/react.png"      alt="ReactJs"      /><span>ReactJs</span></div>
+            <div class="tech-item"><img src="images/python.jpg"     alt="Python"       /><span>Python</span></div>
+            <div class="tech-item"><img src="images/node.svg"       alt="NodeJs"       /><span>NodeJs</span></div>
+            <div class="tech-item"><img src="images/express.png"    alt="Express"      /><span>Express</span></div>
+            <div class="tech-item"><img src="images/fastapi.svg"    alt="FastAPI"      /><span>FastAPI</span></div>
+            <div class="tech-item"><img src="images/mongodb.png"    alt="MongoDB"      /><span>MongoDB</span></div>
+            <div class="tech-item"><img src="images/colab.png"      alt="Google Colab" /><span>Google Colab</span></div>
+            <div class="tech-item"><img src="images/pandas.png"     alt="Pandas"       /><span>Pandas</span></div>
+            <div class="tech-item"><img src="images/opencv.png"     alt="OpenCV"       /><span>OpenCV</span></div>
+            <div class="tech-item"><img src="images/tensorflow.png" alt="TensorFlow"   /><span>TensorFlow</span></div>
+            <div class="tech-item"><img src="images/scikit.png"     alt="Scikit-learn" /><span>Scikit-learn</span></div>
+            <div class="tech-item"><img src="images/roboflow.png"   alt="Roboflow"     /><span>Roboflow</span></div>
+            <div class="tech-item"><img src="images/vscode.jpg"     alt="VS Code"      /><span>VS Code</span></div>
+            <div class="tech-item"><img src="images/postman.png"    alt="Postman"      /><span>Postman</span></div>
+            <div class="tech-item"><img src="images/github.jpg"     alt="GitHub"       /><span>GitHub</span></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Milestones -->
+  <!-- ===================== MILESTONES ===================== -->
   <section class="milestones-dark-section" id="milestones">
     <div class="container">
-      <h2 class="milestones-title reveal">Milestones Timeline in Brief</h2>
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Project Journey</span>
+        <h2 class="milestones-title">Milestones Timeline</h2>
+      </div>
 
       <div class="milestones-dark-wrapper">
+
         <div class="milestone-row reveal">
           <div class="milestone-left"><span class="milestone-point"></span></div>
           <div class="milestone-right">
             <details class="milestone-dropdown">
               <summary>Group Registration</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Selection of project supervisor and initial discussion of research
-                  direction.</p>
+                <p><strong>Description:</strong> Selection of project supervisor and initial discussion of research direction.</p>
                 <p><strong>Date:</strong> 16th May 2025</p>
               </div>
             </details>
@@ -468,8 +339,7 @@
             <details class="milestone-dropdown">
               <summary>Find a Research Topic and the Supervisor</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Selection of project supervisor and initial discussion of research
-                  direction.</p>
+                <p><strong>Description:</strong> Selection of project supervisor and initial discussion of research direction.</p>
                 <p><strong>Date:</strong> 26th May 2025</p>
               </div>
             </details>
@@ -495,8 +365,7 @@
             <details class="milestone-dropdown">
               <summary>Charter Submission</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Project charter submission including scope, objectives, and timeline.
-                </p>
+                <p><strong>Description:</strong> Project charter submission including scope, objectives, and timeline.</p>
                 <p><strong>Date:</strong> 23rd July 2025</p>
               </div>
             </details>
@@ -509,10 +378,8 @@
             <details class="milestone-dropdown">
               <summary>Project Proposal Report Submission</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Presentation of research objectives, methodology, and expected
-                  outcomes.</p>
+                <p><strong>Description:</strong> Presentation of research objectives, methodology, and expected outcomes.</p>
                 <p><strong>Date:</strong> 15th August 2025</p>
-                <p><strong>Marks:</strong></p>
               </div>
             </details>
           </div>
@@ -524,10 +391,8 @@
             <details class="milestone-dropdown">
               <summary>Project Proposal Presentation</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Presentation of research objectives, methodology, and expected
-                  outcomes.</p>
+                <p><strong>Description:</strong> Presentation of research objectives, methodology, and expected outcomes.</p>
                 <p><strong>Date:</strong> 9th September 2025</p>
-                <p><strong>Marks:</strong></p>
               </div>
             </details>
           </div>
@@ -539,8 +404,7 @@
             <details class="milestone-dropdown">
               <summary>Progress Presentation 1</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> First evaluation of project progress including research and initial
-                  implementation.</p>
+                <p><strong>Description:</strong> First evaluation of project progress including research and initial implementation.</p>
                 <p><strong>Date:</strong> 5th January 2026</p>
                 <p><strong>Marks:</strong> 15%</p>
               </div>
@@ -554,10 +418,8 @@
             <details class="milestone-dropdown">
               <summary>Checklist I</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> First evaluation of project progress including research and initial
-                  implementation.</p>
+                <p><strong>Description:</strong> First evaluation of project progress including research and initial implementation.</p>
                 <p><strong>Date:</strong> 11th January 2026</p>
-                <p><strong>Marks:</strong></p>
               </div>
             </details>
           </div>
@@ -569,10 +431,8 @@
             <details class="milestone-dropdown">
               <summary>Progress Presentation 2</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Second progress evaluation focusing on system implementation and
-                  testing.</p>
+                <p><strong>Description:</strong> Second progress evaluation focusing on system implementation and testing.</p>
                 <p><strong>Date:</strong> 10th March 2026</p>
-                <p><strong>Marks:</strong></p>
               </div>
             </details>
           </div>
@@ -584,8 +444,7 @@
             <details class="milestone-dropdown">
               <summary>Draft Final Report</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Submission of the final research report with full implementation
-                  details.</p>
+                <p><strong>Description:</strong> Submission of the final research report with full implementation details.</p>
                 <p><strong>Date:</strong> 26th April 2026</p>
               </div>
             </details>
@@ -611,10 +470,8 @@
             <details class="milestone-dropdown">
               <summary>Website Evaluation and Log Book</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Submission of project log book documenting progress and contributions.
-                </p>
+                <p><strong>Description:</strong> Submission of project log book documenting progress and contributions.</p>
                 <p><strong>Date:</strong> 27th April 2026</p>
-                <p><strong>Marks:</strong></p>
               </div>
             </details>
           </div>
@@ -624,12 +481,10 @@
           <div class="milestone-left"><span class="milestone-point"></span></div>
           <div class="milestone-right">
             <details class="milestone-dropdown">
-              <summary>Final Presentation & Viva</summary>
+              <summary>Final Presentation &amp; Viva</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Submission of project log book documenting progress and contributions.
-                </p>
+                <p><strong>Description:</strong> Submission of project log book documenting progress and contributions.</p>
                 <p><strong>Date:</strong> 28th April 2026</p>
-                <p><strong>Marks:</strong></p>
               </div>
             </details>
           </div>
@@ -641,10 +496,8 @@
             <details class="milestone-dropdown">
               <summary>Checklist II</summary>
               <div class="milestone-content">
-                <p><strong>Description:</strong> Submission of project log book documenting progress and contributions.
-                </p>
+                <p><strong>Description:</strong> Submission of project log book documenting progress and contributions.</p>
                 <p><strong>Date:</strong> 30th April 2026</p>
-                <p><strong>Marks:</strong></p>
               </div>
             </details>
           </div>
@@ -688,15 +541,16 @@
             </details>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Documents -->
+  <!-- ===================== DOCUMENTS ===================== -->
   <section class="section documents-section" id="documents">
     <div class="container">
-      <div class="documents-header reveal">
-        <span class="documents-label">Project Files</span>
+      <div class="section-header documents-header reveal">
+        <span class="section-eyebrow">Project Files</span>
         <h2 class="section-title">Documents</h2>
         <p class="section-subtitle">
           Access all important project-related documents including proposal reports, checklists, research papers,
@@ -705,14 +559,13 @@
       </div>
 
       <div class="documents-grid">
+
         <div class="document-card reveal">
           <div class="document-icon">📘</div>
           <div class="document-content">
             <h3>Topic Assessment Form</h3>
-            <p>
-              This document includes the initial evaluation of the selected research topic, covering its relevance,
-              feasibility, innovation, and academic value before proceeding with the project development process.
-            </p>
+            <p>Initial evaluation of the selected research topic, covering its relevance, feasibility,
+              innovation, and academic value before proceeding with project development.</p>
             <div class="document-meta">
               <span class="doc-type">DOC / PDF</span>
               <span class="doc-status completed">Completed</span>
@@ -725,10 +578,8 @@
           <div class="document-icon">📗</div>
           <div class="document-content">
             <h3>Project Proposal Document</h3>
-            <p>
-              This document presents the proposed solution, research background, objectives, methodology,
-              and system overview of the project that was submitted during the proposal stage.
-            </p>
+            <p>The proposed solution, research background, objectives, methodology, and system overview
+              submitted during the proposal stage.</p>
             <div class="document-meta">
               <span class="doc-type">PDF</span>
               <span class="doc-status completed">Completed</span>
@@ -741,10 +592,8 @@
           <div class="document-icon">📘</div>
           <div class="document-content">
             <h3>Checklist Document I</h3>
-            <p>
-              This checklist contains the first phase of project requirements, progress tracking details,
-              and evaluation points used to monitor the early development activities of the project.
-            </p>
+            <p>First phase of project requirements, progress tracking details, and evaluation points used
+              to monitor early development activities.</p>
             <div class="document-meta">
               <span class="doc-type">Text File</span>
               <span class="doc-status review">In Review</span>
@@ -757,10 +606,8 @@
           <div class="document-icon">📗</div>
           <div class="document-content">
             <h3>Checklist Document II</h3>
-            <p>
-              This document includes the second stage checklist used to verify project progress, completed tasks,
-              and submission readiness before moving toward the final project stages.
-            </p>
+            <p>Second stage checklist used to verify project progress, completed tasks, and submission
+              readiness before moving toward final project stages.</p>
             <div class="document-meta">
               <span class="doc-type">Text File</span>
               <span class="doc-status completed">Completed</span>
@@ -773,10 +620,8 @@
           <div class="document-icon">📘</div>
           <div class="document-content">
             <h3>Research Paper</h3>
-            <p>
-              This document presents the academic research findings of the project, including literature review,
-              methodology, analysis, implementation insights, results, and conclusions.
-            </p>
+            <p>Academic research findings of the project, including literature review, methodology,
+              analysis, implementation insights, results, and conclusions.</p>
             <div class="document-meta">
               <span class="doc-type">PDF</span>
               <span class="doc-status completed">Completed</span>
@@ -789,10 +634,8 @@
           <div class="document-icon">📗</div>
           <div class="document-content">
             <h3>Final Report</h3>
-            <p>
-              This report provides the complete documentation of the project, including system design,
-              implementation details, testing, outcomes, and the overall final submission content.
-            </p>
+            <p>Complete documentation of the project, including system design, implementation details,
+              testing, outcomes, and overall final submission content.</p>
             <div class="document-meta">
               <span class="doc-type">PDF</span>
               <span class="doc-status completed">Completed</span>
@@ -805,10 +648,8 @@
           <div class="document-icon">📘</div>
           <div class="document-content">
             <h3>Log Book Report</h3>
-            <p>
-              This document records the project development journey, including weekly progress,
-              team activities, task updates, and important milestones achieved throughout the research period.
-            </p>
+            <p>Records the project development journey, including weekly progress, team activities,
+              task updates, and important milestones achieved throughout the research period.</p>
             <div class="document-meta">
               <span class="doc-type">PDF</span>
               <span class="doc-status review">In Review</span>
@@ -816,15 +657,16 @@
           </div>
           <a href="#" target="_blank" class="document-btn">View Document <span>↗</span></a>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Slides -->
+  <!-- ===================== SLIDES ===================== -->
   <section class="section alt-bg slides-section" id="slides">
     <div class="container">
-      <div class="slides-header reveal">
-        <span class="slides-label">Presentations</span>
+      <div class="section-header slides-header reveal">
+        <span class="section-eyebrow">Presentations</span>
         <h2 class="section-title">Project Slides</h2>
         <p class="section-subtitle">
           Access all project presentations including proposal, progress updates, and final defense.
@@ -832,112 +674,72 @@
       </div>
 
       <div class="grid grid-2 slides-grid">
+
         <div class="card slide-card reveal">
-          <div class="slide-icon">
-            <i data-lucide="file-text"></i>
-          </div>
+          <div class="slide-icon"><i data-lucide="file-text"></i></div>
           <h3>Proposal Presentation</h3>
           <div class="slide-tags">
-            <span>Overview</span>
-            <span>Architecture</span>
-            <span>Components</span>
+            <span>Overview</span><span>Architecture</span><span>Components</span>
           </div>
-          <p>
-            This presentation provides an overall introduction to the project, including the research background,
-            problem statement, objectives, and proposed solution. It also explains the system architecture and
-            gives a detailed overview of the four main components of the project, highlighting how each part
-            contributes to the complete system.
-          </p>
-          <a href="#" target="_blank" class="slide-btn">
-            View Slides
-            <span class="btn-arrow">↗</span>
-          </a>
+          <p>An overall introduction to the project, including the research background, problem statement,
+            objectives, and proposed solution. Explains the system architecture and gives a detailed overview
+            of the four main components of the project.</p>
+          <a href="#" target="_blank" class="slide-btn">View Slides <span class="btn-arrow">↗</span></a>
         </div>
 
         <div class="card slide-card reveal">
-          <div class="slide-icon">
-            <i data-lucide="chart-column-big"></i>
-          </div>
+          <div class="slide-icon"><i data-lucide="chart-column-big"></i></div>
           <h3>Progress Presentation 1</h3>
           <div class="slide-tags">
-            <span>50% Complete</span>
-            <span>Progress</span>
-            <span>Roadmap</span>
+            <span>50% Complete</span><span>Progress</span><span>Roadmap</span>
           </div>
-          <p>
-            This presentation demonstrates the progress achieved up to the 50% milestone of the project. It focuses
-            on the components and features that have been completed so far, the initial implementation results, and
-            the development progress made by the team. It also outlines the remaining work, future improvements,
-            and the next steps planned for successful project completion.
-          </p>
+          <p>Demonstrates progress achieved up to the 50% milestone, focusing on components and features
+            completed so far, initial implementation results, and development progress made by the team.
+            Also outlines remaining work and next steps.</p>
           <a href="https://docs.google.com/presentation/d/1xkLVhnfiY468XvZokhqcngsLIirE7o9z/edit?usp=sharing&ouid=112131360558945435593&rtpof=true&sd=true"
-            target="_blank" class="slide-btn">
-            View Slides
-            <span class="btn-arrow">↗</span>
-          </a>
+            target="_blank" class="slide-btn">View Slides <span class="btn-arrow">↗</span></a>
         </div>
 
         <div class="card slide-card reveal">
-          <div class="slide-icon">
-            <i data-lucide="check-check"></i>
-          </div>
+          <div class="slide-icon"><i data-lucide="check-check"></i></div>
           <h3>Progress Presentation 2</h3>
           <div class="slide-tags">
-            <span>Modules</span>
-            <span>Integration</span>
-            <span>Implementation</span>
+            <span>Modules</span><span>Integration</span><span>Implementation</span>
           </div>
-          <p>
-            This presentation covers the completion of all major components of the project. It explains the
-            functionalities implemented in each module, the integration between system components, and the
-            technical progress achieved during development. It presents a nearly complete version of the final
-            system with clear details about the implemented features and overall workflow.
-          </p>
+          <p>Covers the completion of all major components, explaining functionalities implemented in each
+            module, integration between system components, and technical progress achieved. Presents a
+            nearly complete version of the final system.</p>
           <a href="https://docs.google.com/presentation/d/1nNt8BNdnd2CCyxvBkVfrDsk1hlgJk1qO/edit?usp=sharing&ouid=112131360558945435593&rtpof=true&sd=true"
-            target="_blank" class="slide-btn">
-            View Slides
-            <span class="btn-arrow">↗</span>
-          </a>
+            target="_blank" class="slide-btn">View Slides <span class="btn-arrow">↗</span></a>
         </div>
 
         <div class="card slide-card reveal">
-          <div class="slide-icon">
-            <i data-lucide="presentation"></i>
-          </div>
+          <div class="slide-icon"><i data-lucide="presentation"></i></div>
           <h3>Final Presentation</h3>
           <div class="slide-tags">
-            <span>Final System</span>
-            <span>Results</span>
-            <span>Future Work</span>
+            <span>Final System</span><span>Results</span><span>Future Work</span>
           </div>
-          <p>
-            This presentation provides a complete explanation of the entire project, including the final system
-            design, implementation, and outcomes. It highlights all completed components, system functionalities,
-            results achieved, challenges faced during development, and the possible future enhancements that can
-            further improve the proposed solution.
-          </p>
-          <a href="#" target="_blank" class="slide-btn">
-            View Slides
-            <span class="btn-arrow">↗</span>
-          </a>
+          <p>Complete explanation of the entire project, including the final system design, implementation,
+            and outcomes. Highlights all completed components, results achieved, challenges faced, and
+            possible future enhancements.</p>
+          <a href="#" target="_blank" class="slide-btn">View Slides <span class="btn-arrow">↗</span></a>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ===================== ABOUT ===================== -->
   <section class="section about-section" id="about">
     <div class="container">
-      <div class="about-header reveal">
-        <span class="about-label">Our Research Team</span>
+      <div class="section-header about-header reveal">
+        <span class="section-eyebrow">Our Research Team</span>
         <h2 class="section-title">About Us</h2>
         <p class="section-subtitle">
-          Meet the dedicated team behind GreenAyu, committed to combining
-          artificial intelligence with Sri Lankan medicinal plant research.
+          Meet the dedicated team behind GreenAyu, committed to combining artificial intelligence
+          with Sri Lankan medicinal plant research.
         </p>
-        <p class="about-university">
-          Sri Lanka Institute of Information Technology Malabe, Sri Lanka
-        </p>
+        <p class="about-university">Sri Lanka Institute of Information Technology · Malabe, Sri Lanka</p>
       </div>
 
       <!-- Supervisors -->
@@ -949,9 +751,7 @@
           <div class="member-info">
             <h4>Prof. Pradeep Abeygunawardhana</h4>
             <span class="member-role">Supervisor</span>
-            <p class="member-email">
-              <a href="mailto:pradeep.a@sliit.lk">pradeep.a@sliit.lk</a>
-            </p>
+            <p class="member-email"><a href="mailto:pradeep.a@sliit.lk">pradeep.a@sliit.lk</a></p>
           </div>
         </div>
 
@@ -962,15 +762,14 @@
           <div class="member-info">
             <h4>Prof. Samantha Rajapaksha</h4>
             <span class="member-role">Co-Supervisor</span>
-            <p class="member-email">
-              <a href="mailto:samantha.r@sliit.lk">samantha.r@sliit.lk</a>
-            </p>
+            <p class="member-email"><a href="mailto:samantha.r@sliit.lk">samantha.r@sliit.lk</a></p>
           </div>
         </div>
       </div>
 
       <!-- Team Members -->
       <div class="grid grid-4 about-grid team-grid">
+
         <div class="card member-card reveal">
           <div class="member-image-wrap">
             <img src="images/goshitha.jpg" alt="Premachandra W. K. G." class="member-img" />
@@ -979,13 +778,8 @@
             <h4>Premachandra W. K. G.</h4>
             <p class="member-dep">Dept. of Information Technology</p>
             <span class="member-role">Research Team Member</span>
-            <p class="member-email">
-              <a href="mailto:it22196538@my.sliit.lk">it22196538@my.sliit.lk</a>
-            </p>
-            <a href="https://www.linkedin.com/in/goshitha-premachandra/" target="_blank" rel="noopener noreferrer"
-              class="member-link">
-              LinkedIn <span>↗</span>
-            </a>
+            <p class="member-email"><a href="mailto:it22196538@my.sliit.lk">it22196538@my.sliit.lk</a></p>
+            <a href="https://www.linkedin.com/in/goshitha-premachandra/" target="_blank" rel="noopener noreferrer" class="member-link">LinkedIn <span>↗</span></a>
           </div>
         </div>
 
@@ -997,13 +791,8 @@
             <h4>Thilakarathna W. H. R. T.</h4>
             <p class="member-dep">Dept. of Information Technology</p>
             <span class="member-role">Research Team Member</span>
-            <p class="member-email">
-              <a href="mailto:it22296450@my.sliit.lk">it22296450@my.sliit.lk</a>
-            </p>
-            <a href="https://www.linkedin.com/in/ruchini-thilakarathna-22660828a/" target="_blank"
-              rel="noopener noreferrer" class="member-link">
-              LinkedIn <span>↗</span>
-            </a>
+            <p class="member-email"><a href="mailto:it22296450@my.sliit.lk">it22296450@my.sliit.lk</a></p>
+            <a href="https://www.linkedin.com/in/ruchini-thilakarathna-22660828a/" target="_blank" rel="noopener noreferrer" class="member-link">LinkedIn <span>↗</span></a>
           </div>
         </div>
 
@@ -1015,13 +804,8 @@
             <h4>Wanasingha W. A. U. J. S.</h4>
             <p class="member-dep">Dept. of Information Technology</p>
             <span class="member-role">Research Team Member</span>
-            <p class="member-email">
-              <a href="mailto:it22274120@my.sliit.lk">it22274120@my.sliit.lk</a>
-            </p>
-            <a href="https://www.linkedin.com/in/udith-jeewapadma-083a1831b/" target="_blank" rel="noopener noreferrer"
-              class="member-link">
-              LinkedIn <span>↗</span>
-            </a>
+            <p class="member-email"><a href="mailto:it22274120@my.sliit.lk">it22274120@my.sliit.lk</a></p>
+            <a href="https://www.linkedin.com/in/udith-jeewapadma-083a1831b/" target="_blank" rel="noopener noreferrer" class="member-link">LinkedIn <span>↗</span></a>
           </div>
         </div>
 
@@ -1033,29 +817,24 @@
             <h4>Rajapaksha H. A. P. M.</h4>
             <p class="member-dep">Dept. of Information Technology</p>
             <span class="member-role">Research Team Member</span>
-            <p class="member-email">
-              <a href="mailto:it22580108@my.sliit.lk">it22580108@my.sliit.lk</a>
-            </p>
-            <a href="https://www.linkedin.com/in/pasindu-madushan-b5b22a2aa/" target="_blank" rel="noopener noreferrer"
-              class="member-link">
-              LinkedIn <span>↗</span>
-            </a>
+            <p class="member-email"><a href="mailto:it22580108@my.sliit.lk">it22580108@my.sliit.lk</a></p>
+            <a href="https://www.linkedin.com/in/pasindu-madushan-b5b22a2aa/" target="_blank" rel="noopener noreferrer" class="member-link">LinkedIn <span>↗</span></a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-
-  <!-- Demo -->
+  <!-- ===================== DEMO ===================== -->
   <section class="section demo-section" id="demo">
     <div class="container">
-      <div class="demo-header reveal">
-        <span class="demo-label">Project Journey</span>
+      <div class="section-header demo-header reveal">
+        <span class="section-eyebrow">Project Journey</span>
         <h2 class="section-title">Our Project Story in Video</h2>
         <p class="section-subtitle">
-          A visual summary of our research journey, including team collaboration,
-          field data collection, development process, and final system demonstration.
+          A visual summary of our research journey, including team collaboration, field data collection,
+          development process, and final system demonstration.
         </p>
       </div>
 
@@ -1063,43 +842,35 @@
         <div class="demo-video-text">
           <span class="demo-mini-label">Featured Video</span>
           <h3>GreenAyu Project Journey</h3>
-          <p>
-            This video presents our full project journey, including team collaboration,
-            field visits, medicinal plant data collection, development activities,
-            and the final AI-based system demonstration.
-          </p>
-
+          <p>This video presents our full project journey, including team collaboration, field visits,
+            medicinal plant data collection, development activities, and the final AI-based system
+            demonstration.</p>
           <div class="demo-video-meta">
             <span>Team Collaboration</span>
             <span>Field Data Collection</span>
             <span>System Demo</span>
           </div>
-
           <a href="YOUR_GOOGLE_DRIVE_VIDEO_LINK" target="_blank" class="demo-video-btn">
-            Watch Full Video
-            <span>↗</span>
+            Watch Full Video <span>↗</span>
           </a>
         </div>
 
         <div class="demo-video-preview">
           <img src="images/demo-thumbnail.jpg" alt="GreenAyu Project Video Preview" />
-          <a href="YOUR_GOOGLE_DRIVE_VIDEO_LINK" target="_blank" class="demo-play-btn" aria-label="Watch Project Video">
-            ▶
-          </a>
+          <a href="YOUR_GOOGLE_DRIVE_VIDEO_LINK" target="_blank" class="demo-play-btn" aria-label="Watch Project Video">▶</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- ===================== CONTACT ===================== -->
   <section class="section alt-bg contact-section" id="contact">
     <div class="container">
-      <div class="contact-header reveal">
-        <span class="contact-label">Get in Touch</span>
+      <div class="section-header contact-header reveal">
+        <span class="section-eyebrow">Get in Touch</span>
         <h2 class="section-title">Contact Us</h2>
         <p class="section-subtitle">
-          Have questions about the research or collaboration opportunities?
-          Reach out to our team anytime.
+          Have questions about the research or collaboration opportunities? Reach out to our team anytime.
         </p>
       </div>
 
@@ -1138,24 +909,19 @@
 
         <div class="contact-form card reveal">
           <h3>Send a Message</h3>
-
           <form id="contact-form" novalidate>
             <div class="form-group">
-              <input type="text" name="user_name" placeholder="Your Name" required />
+              <input type="text"  name="user_name"  placeholder="Your Name"   required />
             </div>
-
             <div class="form-group">
-              <input type="email" name="user_email" placeholder="Your Email" required />
+              <input type="email" name="user_email" placeholder="Your Email"   required />
             </div>
-
             <div class="form-group">
-              <input type="text" name="subject" placeholder="Subject" required />
+              <input type="text"  name="subject"    placeholder="Subject"      required />
             </div>
-
             <div class="form-group">
               <textarea name="message" placeholder="Write your message here..." required></textarea>
             </div>
-
             <button type="submit" class="contact-btn">Send Message</button>
             <p id="form-status" class="form-status"></p>
           </form>
@@ -1164,11 +930,12 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="footer-pattern"></div>
-    <div class="container">
-      <p>© 2026 GreenAyu Research Project | Sri Lankan Medicinal Plants</p>
+    <div class="container footer-inner">
+      <div class="footer-logo">✦ GreenAyu</div>
+      <p>© 2026 GreenAyu Research Project · Sri Lankan Medicinal Plants · SLIIT</p>
     </div>
   </footer>
 
