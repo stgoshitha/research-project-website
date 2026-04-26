@@ -129,126 +129,177 @@
 
   <!-- ===================== DOMAIN ===================== -->
   <section class="section" id="domain">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Our Research</span>
-        <h2 class="section-title">Research Domain</h2>
-        <p class="section-subtitle">
-          The research background, identified gap, core problem, objectives,
-          and methodology behind the AI-based system developed for Sri Lankan medicinal plants.
-        </p>
-      </div>
-
-      <div class="domain-grid">
-
-        <div class="domain-card reveal">
-          <details class="domain-dropdown">
-            <summary>
-              <span class="domain-num">01</span>
-              Literature Survey
-            </summary>
-            <div class="domain-content">
-              <p>Artificial intelligence has shown strong potential in medicinal-plant recognition, especially
-                through deep learning and transfer learning models that classify plants from images with high
-                accuracy. The reviewed studies, including both international and Sri Lankan work, show that
-                CNN-based approaches are effective when suitable training data is available.</p>
-              <p>However, most earlier systems were built around global datasets or leaf-only recognition.
-                That makes them less reliable for Sri Lankan medicinal plants and less useful in real medicinal
-                settings where the correct plant part, plant condition, and practical field use also matter.
-                As a result, the literature points toward the need for a more localized and complete
-                decision-support approach.</p>
-            </div>
-          </details>
-        </div>
-
-        <div class="domain-card reveal">
-          <details class="domain-dropdown">
-            <summary>
-              <span class="domain-num">02</span>
-              Research Gap
-            </summary>
-            <div class="domain-content">
-              <p>The main gap in existing research is not only about model accuracy, but about completeness.
-                Many systems can identify a plant species, yet very few combine localized Sri Lankan data,
-                plant-part segmentation, quality evaluation, post-harvest guidance, and usability for
-                non-technical users in one platform.</p>
-              <p>This means farmers, herbal practitioners, and students may still need to rely on separate
-                tools or manual judgment even after a species is recognized. The paper therefore positions
-                this project as a response to the missing integration between recognition, quality assessment,
-                and practical decision support.</p>
-              <p class="domain-note">Source: Literature Review, pp. 1–2; Introduction, p. 1.</p>
-            </div>
-          </details>
-        </div>
-
-        <div class="domain-card reveal">
-          <details class="domain-dropdown">
-            <summary>
-              <span class="domain-num">03</span>
-              Research Problem
-            </summary>
-            <div class="domain-content">
-              <p>Sri Lanka's medicinal plant sector depends on correct plant identification, proper harvesting,
-                good nutrient management, and careful post-harvest handling. When any of these steps go wrong,
-                medicinal potency and economic value can drop, and safe practical use becomes more difficult.</p>
-              <p>The core problem is therefore broader than species recognition alone. A useful system must
-                also check plant quality, understand which plant part is relevant, and provide actionable
-                guidance on harvesting, fertilizer use, drying, and storage. This project addresses that
-                wider real-world problem through one integrated AI workflow.</p>
-              <p class="domain-note">Source: Abstract and Introduction, p. 1.</p>
-            </div>
-          </details>
-        </div>
-
-        <div class="domain-card reveal">
-          <details class="domain-dropdown">
-            <summary>
-              <span class="domain-num">04</span>
-              Research Objectives
-            </summary>
-            <div class="domain-content">
-              <ul>
-                <li>To develop a localized AI workflow that identifies Sri Lankan medicinal plant species
-                  and evaluates visible plant health.</li>
-                <li>To detect and segment the correct medicinal plant parts so the system supports safer
-                  and more accurate usage.</li>
-                <li>To provide practical decision support for harvest timing, fertilizer selection, drying,
-                  and storage.</li>
-                <li>To deploy the complete solution as a lightweight web platform that remains useful in
-                  both rural and urban contexts.</li>
-              </ul>
-              <p>In full, the project also targets cause detection for poor plant condition — disease, pests,
-                nutrient stress, or environmental impact — and connects those findings with recommendation
-                logic for real-world use.</p>
-              <p class="domain-note">Source: Abstract and Introduction, p. 1; Methodology, pp. 2–3.</p>
-            </div>
-          </details>
-        </div>
-
-        <div class="domain-card reveal">
-          <details class="domain-dropdown">
-            <summary>
-              <span class="domain-num">05</span>
-              Methodology
-            </summary>
-            <div class="domain-content">
-              <p>The system follows a structured AI pipeline starting from data collection, preprocessing,
-                model training, and deployment. A localized dataset of Sri Lankan medicinal plants was
-                collected and used to train deep learning models for plant identification, quality assessment,
-                and segmentation.</p>
-              <p>The system consists of four main modules: plant identification and quality assessment,
-                plant part segmentation, post-harvest advisory, and fertilizer recommendation with harvest
-                prediction. These modules are integrated into a lightweight web-based platform for real-time
-                usage.</p>
-
-              <h4 class="method-title">System Overview</h4>
-              <img src="images/system-overview.png" class="method-img" alt="System Overview">
-          </details>
-        </div>
-
-      </div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Our Research</span>
+      <h2 class="section-title">Research Domain</h2>
+      <p class="section-subtitle">
+        The research background, identified gaps, problem statement, objectives,
+        and methodology behind the AI-based system developed for Sri Lankan medicinal plants.
+      </p>
     </div>
-  </section>
+
+    <div class="domain-grid">
+
+      <div class="domain-card reveal">
+        <details class="domain-dropdown">
+          <summary>
+            <span class="domain-num">01</span>
+            Literature Survey
+          </summary>
+          <div class="domain-content">
+            <p>
+              Artificial Intelligence and Deep Learning have transformed plant analysis by enabling
+              automated species recognition, disease diagnosis, quality evaluation, and predictive
+              decision support. Prior studies have successfully applied CNN architectures such as
+              ResNet, EfficientNet, MobileNet, and transfer learning models for medicinal plant
+              classification with high accuracy.
+            </p>
+            <p>
+              Research in semantic and instance segmentation using U-Net, DeepLabV3+, and Mask R-CNN
+              has further improved the precise extraction of plant structures, medicinal parts, and
+              processed products. These approaches support fine-grained classification and quality analysis.
+            </p>
+            <p>
+              Beyond image recognition, smart agriculture research shows the value of machine learning,
+              remote sensing, IoT sensors, and predictive analytics for fertilizer optimization, harvest
+              prediction, drying guidance, and storage monitoring.
+            </p>
+            <p>
+              However, most existing systems solve isolated problems and lack an integrated,
+              Sri Lanka-specific platform that combines plant identification, segmentation,
+              quality assessment, and advisory support in one intelligent framework.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="domain-card reveal">
+        <details class="domain-dropdown">
+          <summary>
+            <span class="domain-num">02</span>
+            Research Gap
+          </summary>
+          <div class="domain-content">
+            <p>
+              Although previous studies report strong model performance, major gaps remain in localization,
+              practical usability, and system integration. Most available solutions depend on global datasets
+              that do not adequately represent Sri Lankan medicinal flora.
+            </p>
+            <p>
+              Existing systems often focus only on species recognition while ignoring critical tasks such as
+              medicinal plant-part segmentation, visual quality grading, nutrient recommendation, harvest
+              timing prediction, and post-harvest preservation support.
+            </p>
+            <p>
+              There is also a lack of end-to-end intelligent systems capable of linking these functions together.
+              For example, the identified plant type should support fertilizer advice, harvest recommendations,
+              drying duration, and storage guidance.
+            </p>
+            <p>
+              Another important gap is accessibility. Many models remain as research prototypes and are not
+              optimized for lightweight deployment suitable for farmers, herbal practitioners, students,
+              and rural users.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="domain-card reveal">
+        <details class="domain-dropdown">
+          <summary>
+            <span class="domain-num">03</span>
+            Research Problem
+          </summary>
+          <div class="domain-content">
+            <p>
+              Sri Lanka’s medicinal plant sector faces challenges in accurate identification, quality assurance,
+              cultivation support, and preservation of medicinal potency. Traditional practices often rely on
+              expert judgement, making the process inconsistent, time-consuming, and difficult to scale.
+            </p>
+            <p>
+              Misidentification of plants or plant parts can reduce treatment reliability, while improper
+              fertilizer use, poor harvest timing, and weak drying or storage practices can reduce medicinal
+              quality and increase economic losses.
+            </p>
+            <p>
+              The problem therefore extends beyond recognition accuracy alone. A practical solution must support
+              the full lifecycle of medicinal plants from cultivation guidance to quality validation and
+              post-harvest decision-making.
+            </p>
+            <p>
+              This research addresses how an integrated AI-driven platform can solve these interconnected
+              problems through computer vision, machine learning, IoT-supported monitoring, and advisory
+              intelligence.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="domain-card reveal">
+        <details class="domain-dropdown">
+          <summary>
+            <span class="domain-num">04</span>
+            Research Objectives
+          </summary>
+          <div class="domain-content">
+            <ul>
+              <li>Develop a localized intelligent system for identifying Sri Lankan medicinal plants and products.</li>
+              <li>Implement segmentation models to detect relevant medicinal plant parts accurately.</li>
+              <li>Develop quality assessment mechanisms to analyze visible plant or product conditions.</li>
+              <li>Provide intelligent fertilizer recommendation and harvest timing support.</li>
+              <li>Generate post-harvest drying and storage recommendations to reduce spoilage and preserve quality.</li>
+              <li>Integrate all modules within a unified web-based decision support platform.</li>
+            </ul>
+            <p>
+              The broader objective is to improve productivity, preserve medicinal quality, support Ayurveda
+              practices, and provide accessible technology support to farmers, students, herbal practitioners,
+              and researchers.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="domain-card reveal">
+        <details class="domain-dropdown">
+          <summary>
+            <span class="domain-num">05</span>
+            Methodology
+          </summary>
+          <div class="domain-content">
+            <p>
+              The proposed methodology follows a multi-stage research pipeline including data collection,
+              preprocessing, annotation, model development, system integration, evaluation, and deployment.
+            </p>
+            <p>
+              A localized medicinal plant dataset is collected from field visits, herbal markets, plant nurseries,
+              and curated sources. Images are prepared for plant identification, plant-part segmentation,
+              and quality assessment tasks.
+            </p>
+            <p>
+              Deep learning models are trained for recognition, segmentation, and quality grading, while
+              machine learning models support fertilizer advisory, harvest prediction, drying duration
+              estimation, and storage recommendation generation.
+            </p>
+            <p>
+              The system consists of four intelligent modules working together: Plant Identification and
+              Quality Assessment, Plant Part Segmentation, Fertilizer and Harvest Advisory, and Post-Harvest
+              Drying and Storage Advisory.
+            </p>
+            <p>
+              Outputs from these modules are integrated through a lightweight web platform designed for
+              real-time user interaction and practical deployment.
+            </p>
+
+            <h4 class="method-title">System Overview</h4>
+            <img src="images/system-overview.png" class="method-img" alt="System Overview">
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- ===================== TECHNOLOGIES ===================== -->
   <div class="tech-section-wrapper">
