@@ -1363,6 +1363,61 @@ body.loaded .hero { opacity: 1; transform: translateY(0); }
   transition: var(--transition);
 }
 
+.slide-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.slide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  justify-content: center;
+}
+
+/* View button (primary theme) */
+.view-btn {
+  background: linear-gradient(135deg, var(--primary-mid), var(--primary-dark));
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(11, 107, 100, 0.25);
+}
+
+.view-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(11, 107, 100, 0.35);
+}
+
+/* Download button (green accent) */
+.download-btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(107, 186, 71, 0.25);
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(107, 186, 71, 0.35);
+}
+
+/* Arrow animation */
+.slide-btn span {
+  transition: transform 0.3s ease;
+}
+
+.slide-btn:hover span {
+  transform: translate(3px, -2px);
+}
+
 .btn-arrow { transition: transform 0.25s ease; }
 .slide-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .slide-btn:hover .btn-arrow { transform: translate(3px, -2px); }
